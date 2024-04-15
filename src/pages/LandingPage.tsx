@@ -3,11 +3,14 @@ import { StyledLandingPage } from "../styles/styles";
 import HeaderSection from "./sections/HeaderSection";
 import { ScreenSizeDetectClass } from "../helpers/detectScreenSizeClass";
 import ScreenSizeDetect from "../components/ScreenSizeDetect";
+import { contentApis } from "../apis/contentData";
 
 interface LandingPageState {
   windowWidth: number;
   windowHeight: number;
 }
+
+
 
 export default class LandingPage extends Component<{}, LandingPageState> {
   constructor(props: {}) {
@@ -40,7 +43,7 @@ export default class LandingPage extends Component<{}, LandingPageState> {
     const screenNow = new ScreenSizeDetectClass(windowWidth).detectScreenSize();
     return (
       <StyledLandingPage>
-        <HeaderSection />
+        <HeaderSection dataApis={contentApis}/>
         <ScreenSizeDetect screenNow={screenNow} windowWidth={windowWidth}  windowHeight={windowHeight}/>
       </StyledLandingPage>
     );
