@@ -58,7 +58,7 @@ export const StyledScreenSizeDetect = styled.div`
   left: 50%;
   transform: translate(-50%, 100%);
   h1 {
-    font-family: "Chivo";
+    font-family: "Inter";
     font-style: normal;
     font-weight: 900;
     text-transform: capitailze;
