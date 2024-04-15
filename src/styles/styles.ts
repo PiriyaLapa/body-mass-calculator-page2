@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+export const StyledHeaderCard = styled.div``;
 export const StyledHeaderSection = styled.div`
   :nth-child(1) {
     @media screen and (max-width: 767px) {
