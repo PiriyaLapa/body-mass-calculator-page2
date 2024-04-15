@@ -24,7 +24,7 @@ export const StyledHeaderSection = styled.div`
 `;
 export const StyledLandingPage = styled.div`
     display:grid;
-    grid-template-rows:  auto auto auto 
+    grid-template-rows:  auto auto auto ;
 
     @media screen and (max-width: 767px) {
         //
@@ -67,5 +67,16 @@ export const StyledScreenSizeDetect = styled.div`
     span {
       color: #54e6af;
     }
+  }
+`;
+export const StyledBmiForm = styled.form``;
+export const RadioBox = styled.div`
+display:flex;
+justify-content:space-around;
+text-align:center;
+  div{
+      display:inline-block;
+      align-items:center;
+    
   }
 `;
