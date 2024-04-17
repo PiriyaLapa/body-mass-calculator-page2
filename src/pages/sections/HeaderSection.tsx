@@ -2,7 +2,7 @@ import { Component, ReactNode } from "react";
 import { StyledHeaderSection } from "../../styles/styles";
 import { HeaderContent } from "../../apis/contentData";
 import HeaderCard from "../../components/cards/HeaderCard";
-import BmiForm from "../../components/cards/BmiForm";
+import BmiForm from "../../components/forms/BmiForm";
 
 interface HeaderSectionProps {
   dataApis: HeaderContent;

@@ -54,7 +54,7 @@ export const StyledScreenSizeDetect = styled.div`
   background-color: rgba(143, 227, 249, 0.2);
   padding: 2%;
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, 100%);
   h1 {
@@ -69,8 +69,8 @@ export const StyledScreenSizeDetect = styled.div`
   }
 `;
 export const StyledBmiForm = styled.form`
-  display:grid;
-  grid-template-rows:auto auto auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
 `;
 export const RadioBox = styled.div`
   display: flex;
@@ -83,7 +83,6 @@ export const RadioBox = styled.div`
       align-items: center;
     }
   }
-
 
   // Tablet
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -107,7 +106,10 @@ export const StyledImprerialForm = styled.div`
   display: block;
 `;
 
-
 export const ContainerRadio = styled.div`
-  display:block;
+  display: block;
+`;
+export const StyledResultBox = styled.div`
+  background: lightblue;
+  color: white;
 `;
