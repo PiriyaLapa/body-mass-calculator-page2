@@ -3,6 +3,7 @@ import { RadioBox, StyledBmiForm } from "../../styles/styles";
 import MetricForm from "./MetricForm";
 import ImprerialForm from "./ImprerialForm";
 
+
 export interface BmiFormProps {
   bmiContent: {
     title: string;
@@ -15,7 +16,7 @@ export interface BmiFormProps {
 
 interface RadioOptionState {
   selectedOption: string | null;
-  isOptionMetricSelected: string | null;
+  isOptionMetricSelected: boolean;
 }
 
 export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
@@ -23,11 +24,19 @@ export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
     super(props);
     this.state = {
       selectedOption: null,
-      isOptionMetricSelected: null,
+      isOptionMetricSelected: false,
     };
   }
+
+  handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedOption = event.target.value;
+    const isOptionMetricSelected = selectedOption === this.props.bmiContent.optionA;
+    this.setState({ selectedOption, isOptionMetricSelected });
+  }
+
   render(): ReactNode {
-    const { title, optionA } = this.props.bmiContent;
+    const { title, optionA, optionB } = this.props.bmiContent;
+    const { selectedOption, isOptionMetricSelected } = this.state;
     const bmiContents = this.props.bmiContent;
     return (
       <StyledBmiForm>
@@ -36,33 +45,31 @@ export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
           <div>
             <input
               type="radio"
-              name="metric"
-              id="metric"
-              value="Metric"
-              checked={selectedOption === metric}
+              name="bmiOption"
+              id={optionA}
+              value={optionA}
+              checked={selectedOption === optionA}
               onChange={this.handleOptionChange}
             />
-            <label htmlFor="Matric">{optionA}</label>
+            <label htmlFor={optionA}>{optionA}</label>
           </div>
           <div>
             <input
               type="radio"
-              name="imperial"
-              id="imperial"
-              value="Imperial"
-              checked={selectedOption === imperial}
+              name="bmiOption"
+              id={optionB}
+              value={optionB}
+              checked={selectedOption === optionB}
               onChange={this.handleOptionChange}
             />
-            <label htmlFor="Imperial">{optionA}</label>
+            <label htmlFor={optionB}>{optionB}</label>
           </div>
         </RadioBox>
-        {isOptionMetricSelected !== null && isOptionMetricSelected ? (
+        {isOptionMetricSelected ? (
           <MetricForm bmiContent={bmiContents} />
         ) : (
           <ImprerialForm bmiContent={bmiContents} />
         )}
-        {/* <MetricForm bmiContent={bmiContents} />
-        <ImprerialForm bmiContent={bmiContents} /> */}
       </StyledBmiForm>
     );
   }
