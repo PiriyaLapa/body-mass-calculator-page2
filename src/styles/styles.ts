@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeaderCard = styled.div``;
-export const StyledHeaderSection = styled.div`
+export const StyledHeaderSection = styled.header`
   :nth-child(1) {
     @media screen and (max-width: 767px) {
       text-align: center;
@@ -23,27 +23,26 @@ export const StyledHeaderSection = styled.div`
   }
 `;
 export const StyledLandingPage = styled.div`
-    display:grid;
-    grid-template-rows:  auto auto auto ;
+  display: grid;
+  grid-template-rows: auto auto auto;
 
-    @media screen and (max-width: 767px) {
-        //
-    }
+  @media screen and (max-width: 767px) {
+    //
+  }
 
-    // Tablet
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-    }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  }
 
-    // Labtop
-    @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    }
+  // Labtop
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  }
 
-    // Desktop
-    @media screen and (min-width: 1440px) {
-    }
-    @media screen and (min-width: 1920px) {
-    }
-
+  // Desktop
+  @media screen and (min-width: 1440px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 export const StyledMainSection = styled.div``;
@@ -69,14 +68,46 @@ export const StyledScreenSizeDetect = styled.div`
     }
   }
 `;
-export const StyledBmiForm = styled.form``;
+export const StyledBmiForm = styled.form`
+  display:grid;
+  grid-template-rows:auto auto auto;
+`;
 export const RadioBox = styled.div`
-display:flex;
-justify-content:space-around;
-text-align:center;
-  div{
-      display:inline-block;
-      align-items:center;
-    
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    div {
+      display: inline-block;
+      align-items: center;
+    }
   }
+
+
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  // Labtop
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  }
+
+  // Desktop
+  @media screen and (min-width: 1440px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
+`;
+
+export const StyledMetricForm = styled.div`
+  display: block;
+`;
+export const StyledImprerialForm = styled.div`
+  display: block;
+`;
+
+
+export const ContainerRadio = styled.div`
+  display:block;
 `;
