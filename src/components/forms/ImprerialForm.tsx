@@ -8,13 +8,11 @@ export default class ImprerialForm extends Component<BmiFormProps> {
     const { height, weight } = this.props.bmiContent;
     return (
       <StyledImprerialForm>
-        <h2>Imperaili Form</h2>
-        <label htmlFor="height">{height}</label>
+      <h2>Imperial Form</h2>
+        <label htmlFor="height">{height} (in inches):</label>
         <input type="text" name="height" id="height" />
-          <label htmlFor="weight">{weight}</label>
-          <input type="text" name="input1" id="input1" />
-          <input type="text" name="input2" id="input2" />
-          <input type="text" name="input3" id="input3" />
+        <label htmlFor="weight">{weight}(in pounds):</label>
+        <input type="text" name="weight" id="weight" />
         <ResultBox />
       </StyledImprerialForm>
     );
