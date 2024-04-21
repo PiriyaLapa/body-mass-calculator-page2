@@ -113,3 +113,6 @@ export const StyledResultBox = styled.div`
   background: lightblue;
   color: white;
 `;
+
+export const StyledMainCard = styled.div``;
+export const StyledImg = styled.img`width:100%`;
