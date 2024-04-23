@@ -11,7 +11,7 @@ export interface SubCard {
   content: string;
 }
 
-interface FooterMainCard {
+export interface IFooterMainCard {
   title: string;
   content: string;
 }
@@ -23,7 +23,7 @@ interface FooterSubCard {
 }
 
 export interface FooterContent {
-  maincard: FooterMainCard;
+  maincard: IFooterMainCard;
   subcard: FooterSubCard[];
 }
 

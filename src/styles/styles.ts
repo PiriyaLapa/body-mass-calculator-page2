@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const StyledHeaderCard = styled.div``;
 export const StyledHeaderSection = styled.header`
   :nth-child(1) {
@@ -115,4 +114,8 @@ export const StyledResultBox = styled.div`
 `;
 export const StyledIconCard = styled.div``;
 export const StyledMainCard = styled.div``;
-export const StyledImg = styled.img`width:100%`;
+export const StyledImg = styled.img`
+  width: 100%;
+`;
+
+export const StyledFooterSection = styled.div``;

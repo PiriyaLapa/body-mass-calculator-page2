@@ -5,6 +5,7 @@ import { ScreenSizeDetectClass } from "../helpers/detectScreenSizeClass";
 import ScreenSizeDetect from "../components/ScreenSizeDetect";
 import { contentApis } from "../apis/contentData";
 import MainSection from "./sections/MainSection";
+import FooterSection from "./sections/FooterSection";
 
 interface LandingPageState {
   windowWidth: number;
@@ -44,6 +45,7 @@ export default class LandingPage extends Component<{}, LandingPageState> {
       <StyledLandingPage>
         <HeaderSection dataApis={contentApis} />
         <MainSection dataApis={contentApis} />
+        <FooterSection dataApis={contentApis.cardcontent.footercontent} />
         <ScreenSizeDetect
           screenNow={screenNow}
           windowWidth={windowWidth}
