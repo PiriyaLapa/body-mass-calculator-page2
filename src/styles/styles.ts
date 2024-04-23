@@ -119,3 +119,4 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledFooterSection = styled.div``;
+export const StyledFooterIconCard = styled.div``;
