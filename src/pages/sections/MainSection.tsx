@@ -9,11 +9,11 @@ interface MainSectionProps {
 }
 export default class MainSection extends Component<MainSectionProps> {
   render() {
-    const { maincard, subcard} = this.props.dataApis.cardcontent;
+    const { maincard, subcard } = this.props.dataApis.cardcontent;
     return (
       <StyledMainSection>
         <MainCard maincardContent={maincard} />
-        <IconCard subCardContent={subcard} /> 
+        <IconCard subCardContent={subcard} />
       </StyledMainSection>
     );
   }

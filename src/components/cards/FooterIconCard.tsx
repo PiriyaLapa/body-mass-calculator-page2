@@ -1,9 +1,10 @@
 import { Component } from "react";
 import { StyledFooterIconCard } from "../../styles/styles";
 import { IFooterSubCard } from "../../apis/contentData";
+import FooterIcon from "../icons/FooterIcons";
 
 interface FooterIconCardProps {
-  subCardContent: IFooterSubCard;
+  subCardContent: IFooterSubCard[];
 }
 export default class FooterIconCard extends Component<FooterIconCardProps> {
   renderSubFooterCard() {
@@ -16,7 +17,13 @@ export default class FooterIconCard extends Component<FooterIconCardProps> {
       4: "race",
     };
     
-    return  subCardContent.map((card) => (<div></div>))
+    return subCardContent.map((card) => (
+      <div key={card.id}>
+        <FooterIcon type={iconMapping[card.id]} />
+        <h3>{card.title}</h3>
+        <p>{card.content}</p>
+      </div>
+    ))
   }
 
   render() {
