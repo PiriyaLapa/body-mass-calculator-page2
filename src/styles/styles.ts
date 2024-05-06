@@ -26,6 +26,7 @@ export const StyledHeaderCard = styled.div`
     gap: 24px;
     :nth-child(1) {
       margin: 0 auto;
+      margin-top:30px;
     }
   }
 
@@ -44,6 +45,8 @@ export const StyledHeaderCard = styled.div`
   }
 `;
 export const StyledHeaderSection = styled.header`
+  background:linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%); 
+  border-radius:0 0 35px 35px;
   @media screen and (max-width: 767px) {
     text-align: center;
   }
