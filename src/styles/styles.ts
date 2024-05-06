@@ -1,50 +1,66 @@
 import styled from "styled-components";
 export const StyledHeaderCard = styled.div`
-    @media screen and (max-width: 767px) {
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      padding:0;
-      gap:24px;
-      :nth-child(1){
-        margin: 0 auto;
-        border:1px solid green;
-      }
-    }
+  font-family: "Inter";
+  font-styled: normal;
+  :nth-child(2) {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: -0.05em;
+    color: #253347;
+  }
 
-    // Tablet
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-    }
+  :nth-child(3) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #5e6e85;
+  }
 
-    // Labtop
-    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 24px;
+    :nth-child(1) {
+      margin: 0 auto;
     }
+  }
 
-    // Desktop
-    @media screen and (min-width: 1440px) {
-    }
-    @media screen and (min-width: 1920px) {
-    }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  }
 
+  // Labtop
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  }
+
+  // Desktop
+  @media screen and (min-width: 1440px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 export const StyledHeaderSection = styled.header`
-    @media screen and (max-width: 767px) {
-      text-align: center;
-    }
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 
-    // Tablet
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-    }
+  // Tablet
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  }
 
-    // Labtop
-    @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    }
+  // Labtop
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  }
 
-    // Desktop
-    @media screen and (min-width: 1440px) {
-    }
-    @media screen and (min-width: 1920px) {
-    }
+  // Desktop
+  @media screen and (min-width: 1440px) {
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 export const StyledLandingPage = styled.div`
   display: grid;

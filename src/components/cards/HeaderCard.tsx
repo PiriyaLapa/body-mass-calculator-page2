@@ -15,7 +15,7 @@ export default class HeaderCard extends Component<HeaderCardProps> {
     return (
       <StyledHeaderCard>
         <MainLogo />
-        <h1>{title}</h1>
+        <span>{title}</span>
         <span>{content}</span>
       </StyledHeaderCard>
     );
