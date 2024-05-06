@@ -1,7 +1,33 @@
 import styled from "styled-components";
-export const StyledHeaderCard = styled.div``;
+export const StyledHeaderCard = styled.div`
+    @media screen and (max-width: 767px) {
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      padding:0;
+      gap:24px;
+      :nth-child(1){
+        margin: 0 auto;
+        border:1px solid green;
+      }
+    }
+
+    // Tablet
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    }
+
+    // Labtop
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    }
+
+    // Desktop
+    @media screen and (min-width: 1440px) {
+    }
+    @media screen and (min-width: 1920px) {
+    }
+
+`;
 export const StyledHeaderSection = styled.header`
-  :nth-child(1) {
     @media screen and (max-width: 767px) {
       text-align: center;
     }
@@ -19,7 +45,6 @@ export const StyledHeaderSection = styled.header`
     }
     @media screen and (min-width: 1920px) {
     }
-  }
 `;
 export const StyledLandingPage = styled.div`
   display: grid;
