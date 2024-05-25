@@ -153,8 +153,8 @@ export const ContainerRadio = styled.div`
   display: block;
 `;
 export const StyledResultBox = styled.div`
-  background: lightblue;
-  color: white;
+  background-color:#ffff;
+  color:#5E6E85;
 `;
 export const StyledIconCard = styled.div``;
 export const StyledMainCard = styled.div``;
