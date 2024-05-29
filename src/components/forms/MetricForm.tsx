@@ -1,9 +1,30 @@
-import { Component, ReactNode } from "react";
+import { ChangeEvent, Component, ReactNode } from "react";
 import { StyledMetricForm } from "../../styles/styles";
 import ResultBox from "./ResultBox";
 import { BmiFormProps } from "./BmiForm";
 
-export default class MetricForm extends Component<BmiFormProps> {
+interface MetricFormState {
+  height: string;
+  weight: string;
+  bmi: number | null;
+}
+export default class MetricForm extends Component<
+  BmiFormProps,
+  MetricFormState
+> {
+  constructor(props: BmiFormProps) {
+    super(props);
+    this.state = {
+      height: "",
+      weight: "",
+      bmi: null,
+    };
+  }
+
+  handleInputChnage = (event:ChangeEvent<HTMLInputElement>) => {
+    const {name,value} = this.state;
+  } 
+
   render(): ReactNode {
     const { height, weight } = this.props.bmiContent;
     return (
