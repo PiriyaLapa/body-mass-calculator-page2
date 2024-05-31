@@ -21,9 +21,10 @@ export default class MetricForm extends Component<
     };
   }
 
-  handleInputChnage = (event:ChangeEvent<HTMLInputElement>) => {
-    const {name,value} = this.state;
-  } 
+  handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    
+  };
 
   render(): ReactNode {
     const { height, weight } = this.props.bmiContent;
@@ -31,9 +32,21 @@ export default class MetricForm extends Component<
       <StyledMetricForm>
         <h2>Metric From</h2>
         <label htmlFor="height">{height}</label>
-        <input type="text" name="height" id="height" />
+        <input
+          type="text"
+          name="height"
+          id="height"
+          value={height}
+          onChange={this.handleInputChange}
+        />
         <label htmlFor="weight">{weight}</label>
-        <input type="text" name="weight" id="weight" />
+        <input
+          type="text"
+          name="weight"
+          id="weight"
+          value={weight}
+          onChange={this.handleInputChange}
+        />
         <ResultBox />
       </StyledMetricForm>
     );
