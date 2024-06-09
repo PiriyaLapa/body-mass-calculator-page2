@@ -1,4 +1,4 @@
-import { ChangeEvent, Component, ReactNode } from "react";
+import { Component, ReactNode } from "react";
 import { StyledMetricForm } from "../../styles/styles";
 import ResultBox from "./ResultBox";
 import { BmiFormProps } from "./BmiForm";
@@ -19,19 +19,6 @@ export default class MetricForm extends Component<
       weight: "",
       bmi: null,
     };
-  }
-
-  handleInputChnage = (event:ChangeEvent<HTMLInputElement>) => {
-    cosnt {name,value} = this.target;
-    this.setState({
-      [name]:value
-    }as Pick<MetricFormState, keyof MetricFormState>)
-  } 
-
-  handleSubmit = (event:  FormEvent) => {
-    event.preventDefault();
-    const {height,weight} = this.state;
-    
   }
 
   render(): ReactNode {
