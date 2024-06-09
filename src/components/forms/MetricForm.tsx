@@ -22,8 +22,17 @@ export default class MetricForm extends Component<
   }
 
   handleInputChnage = (event:ChangeEvent<HTMLInputElement>) => {
-    const {name,value} = this.state;
+    cosnt {name,value} = this.target;
+    this.setState({
+      [name]:value
+    }as Pick<MetricFormState, keyof MetricFormState>)
   } 
+
+  handleSubmit = (event:  FormEvent) => {
+    event.preventDefault();
+    const {height,weight} = this.state;
+    
+  }
 
   render(): ReactNode {
     const { height, weight } = this.props.bmiContent;
