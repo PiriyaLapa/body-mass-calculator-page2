@@ -3,7 +3,6 @@ import { RadioBox, StyledBmiForm } from "../../styles/styles";
 import MetricForm from "./MetricForm";
 import ImprerialForm from "./ImprerialForm";
 
-
 export interface BmiFormProps {
   bmiContent: {
     title: string;
@@ -30,9 +29,10 @@ export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
 
   handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedOption = event.target.value;
-    const isOptionMetricSelected = selectedOption === this.props.bmiContent.optionA;
+    const isOptionMetricSelected =
+      selectedOption === this.props.bmiContent.optionA;
     this.setState({ selectedOption, isOptionMetricSelected });
-  }
+  };
 
   render(): ReactNode {
     const { title, optionA, optionB } = this.props.bmiContent;

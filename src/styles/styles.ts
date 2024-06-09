@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const StyledHeaderCard = styled.div`
   font-family: "Inter";
-  font-styled: normal;
+  font-style: normal;
   :nth-child(2) {
     font-weight: 600;
     font-size: 48px;
@@ -142,8 +142,9 @@ export const RadioBox = styled.div`
   }
 `;
 
-export const StyledMetricForm = styled.div`
+export const StyledMetricForm = styled.form`
   display: block;
+  
 `;
 export const StyledImprerialForm = styled.div`
   display: block;
