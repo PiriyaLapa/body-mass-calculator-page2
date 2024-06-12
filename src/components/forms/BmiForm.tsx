@@ -1,4 +1,4 @@
-import { Component, ReactNode } from "react";
+import { Component, ReactNode, createRef } from "react";
 import { RadioBox, StyledBmiForm } from "../../styles/styles";
 import MetricForm from "./MetricForm";
 import ImprerialForm from "./ImprerialForm";
@@ -19,12 +19,21 @@ interface RadioOptionState {
 }
 
 export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
+  private defaultOptionRef = createRef<HTMLInputElement>();  
+
   constructor(props: BmiFormProps) {
     super(props);
+    const defaultOption = props.bmiContent.optionA;
     this.state = {
-      selectedOption: null,
-      isOptionMetricSelected: false,
+      selectedOption: defaultOption,
+      isOptionMetricSelected: true,
     };
+  }
+
+  componentDidMount() {
+    if(this.defaultOptionRef.current){
+      this.defaultOptionRef.current.focus();
+    }
   }
 
   handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,6 +59,7 @@ export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
               value={optionA}
               checked={selectedOption === optionA}
               onChange={this.handleOptionChange}
+              ref={this.defaultOptionRef}
             />
             <label htmlFor={optionA}>{optionA}</label>
           </div>

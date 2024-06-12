@@ -1,4 +1,10 @@
-import { ChangeEvent, Component, FormEvent, KeyboardEvent, ReactNode } from "react";
+import {
+  ChangeEvent,
+  Component,
+  FormEvent,
+  KeyboardEvent,
+  ReactNode,
+} from "react";
 import { StyledMetricForm } from "../../styles/styles";
 // import ResultBox from "./ResultBox"; // Uncomment this if you need ResultBox
 import { BmiFormProps } from "./BmiForm";
@@ -8,7 +14,10 @@ interface MetricFormState {
   weight: string;
 }
 
-export default class MetricForm extends Component<BmiFormProps, MetricFormState> {
+export default class MetricForm extends Component<
+  BmiFormProps,
+  MetricFormState
+> {
   constructor(props: BmiFormProps) {
     super(props);
     this.state = {
@@ -37,8 +46,8 @@ export default class MetricForm extends Component<BmiFormProps, MetricFormState>
   };
 
   logValue = () => {
-    console.log('Height:', this.state.height);
-    console.log('Weight:', this.state.weight);
+    console.log("Height:", this.state.height);
+    console.log("Weight:", this.state.weight);
   };
 
   render(): ReactNode {
