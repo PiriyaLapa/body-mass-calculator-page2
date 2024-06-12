@@ -111,7 +111,7 @@ export const StyledScreenSizeDetect = styled.div`
     }
   }
 `;
-export const StyledBmiForm = styled.form`
+export const StyledBmiForm = styled.div`
   display: grid;
   grid-template-rows: auto auto auto;
 `;
