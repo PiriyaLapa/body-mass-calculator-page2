@@ -6,7 +6,7 @@ import {
   ReactNode,
 } from "react";
 import { StyledMetricForm } from "../../styles/styles";
-// import ResultBox from "./ResultBox"; // Uncomment this if you need ResultBox
+import ResultBox from "./ResultBox"; // Uncomment this if you need ResultBox
 import { BmiFormProps } from "./BmiForm";
 
 interface MetricFormState {
@@ -46,9 +46,18 @@ export default class MetricForm extends Component<
   };
 
   logValue = () => {
-    console.log("Height:", this.state.height);
-    console.log("Weight:", this.state.weight);
+    const {height, weight} = this.state;
+    const heightNumber = this.convertToNumber(height);
+    const weightNumber = this.convertToNumber(weight);
+    // console.log("Height:", this.state.height);
+    // console.log("Weight:", this.state.weight);
   };
+  
+  convertToNumber =(value:string): number | null => {
+    const number =parseInt(value);
+    return isNaN(number) ? null: number;
+  }
+
 
   render(): ReactNode {
     const { height, weight } = this.state;
@@ -73,9 +82,7 @@ export default class MetricForm extends Component<
           onChange={this.handleChangeInput}
           onKeyDown={this.handleKeyPress}
         />
-        {/* <button type="submit">Submit</button> */}
-        {/* Uncomment the following line if you need ResultBox */}
-        {/* <ResultBox measurements={{ height: Number(height), weight: Number(weight) }} /> */}
+        <ResultBox state={this.state} />
       </StyledMetricForm>
     );
   }

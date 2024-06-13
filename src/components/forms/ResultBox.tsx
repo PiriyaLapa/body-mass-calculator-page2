@@ -1,8 +1,15 @@
 import { Component, ReactNode } from "react";
 import { StyledResultBox } from "../../styles/styles";
 
-export default class ResultBox extends Component {
+interface resultProps {
+  state: {
+    height: string;
+    weight: string;
+  };
+}
+export default class ResultBox extends Component<resultProps> {
   render(): ReactNode {
+    const { height, weight } = this.props.state;
     return (
       <StyledResultBox>
         <span>
@@ -11,6 +18,8 @@ export default class ResultBox extends Component {
           nesciunt libero impedit repudiandae provident, doloribus fuga commodi
           autem eum!
         </span>
+        <p>height : {height}</p>
+        <p>weight: {weight}</p>
       </StyledResultBox>
     );
   }
