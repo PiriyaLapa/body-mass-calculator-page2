@@ -46,11 +46,10 @@ export default class MetricForm extends Component<
   };
 
   logValue = () => {
-    const {height, weight} = this.state;
-    const heightNumber = this.convertToNumber(height);
-    const weightNumber = this.convertToNumber(weight);
-    // console.log("Height:", this.state.height);
-    // console.log("Weight:", this.state.weight);
+    // const heightNumber = this.convertToNumber(height);
+    // const weightNumber = this.convertToNumber(weight);
+    console.log("Height:", this.state.height);
+    console.log("Weight:", this.state.weight);
   };
   
   convertToNumber =(value:string): number | null => {
