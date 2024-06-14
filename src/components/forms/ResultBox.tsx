@@ -8,6 +8,7 @@ interface resultProps {
   };
 }
 export default class ResultBox extends Component<resultProps> {
+  
   render(): ReactNode {
     const { height, weight } = this.props.state;
     return (

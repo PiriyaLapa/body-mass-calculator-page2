@@ -46,7 +46,7 @@ export default class ImprerialForm extends Component<BmiFormProps,ImprerialState
         <input type="text" name="height" id="height" value={height} onChange={this.handleChangeInput}  onKeyDown={this.handleKeyPress} />
         <label htmlFor="weight">weight(in pounds):</label>
         <input type="text" name="weight" id="weight" value={weight} onChange={this.handleChangeInput} onKeyDown={this.handleKeyPress}/>
-        <ResultBox />
+        <ResultBox state={this.state} />
       </StyledImprerialForm>
     );
   }
