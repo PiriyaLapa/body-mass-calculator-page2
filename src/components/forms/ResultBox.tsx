@@ -8,6 +8,9 @@ interface resultProps {
   };
 }
 export default class ResultBox extends Component<resultProps> {
+  BmiCal = (height, weight) =>{
+      return console.log(height,weight); 
+  }
   
   render(): ReactNode {
     const { height, weight } = this.props.state;
