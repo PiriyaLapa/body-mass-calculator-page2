@@ -15,20 +15,6 @@ export default class ResultBox extends Component<resultProps> {
   render(): ReactNode {
     const { height, weight } = this.props.state;
     const bmiResult = this.CalBmi(parseInt(weight), parseInt(height));
-    // height , weight define to cm
-
-    /**
-     * Named funtion
-     * function add(x: number, y:number): number {
-          return x + y ;
-     * }
-
-        anolymous function
-
-        const add = function(x:number, y:number) : number {
-          return x + y;
-        }
-     */
     return (
       <StyledResultBox>
         <span>
@@ -44,4 +30,3 @@ export default class ResultBox extends Component<resultProps> {
     );
   }
 }
-
