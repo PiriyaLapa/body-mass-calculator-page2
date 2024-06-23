@@ -1,5 +1,6 @@
 import { Component, ReactNode } from "react";
 import { StyledResultBox } from "../../styles/styles";
+import BmiCal from "../../helpers/BmiCal";
 
 interface resultProps {
   state: {
@@ -8,13 +9,13 @@ interface resultProps {
   };
 }
 export default class ResultBox extends Component<resultProps> {
-  CalBmi(weight: number, height: number): number {
-    return weight / Math.pow(height, 2);
-  }
 
   render(): ReactNode {
     const { height, weight } = this.props.state;
-    const bmiResult = this.CalBmi(parseInt(weight), parseInt(height));
+    const bmiCal = new BmiCal(parseInt(height), parseInt(weight));;
+    const bmiResult = bmiCal.Metrix();
+    const bmiStatus= bmiCal.GetHealthStatus(bmiResult);
+    
     return (
       <StyledResultBox>
         <span>
@@ -22,10 +23,11 @@ export default class ResultBox extends Component<resultProps> {
           ea cupiditate reiciendis sunt quae neque quidem eos ipsum cumque
           nesciunt libero impedit repudiandae provident, doloribus fuga commodi
           autem eum!
-        </span>{" "}
+        </span>
         <p>height : {height}</p>
         <p>weight: {weight}</p>
         <h2>{bmiResult}</h2>
+        <h2>{bmiStatus}</h2>
       </StyledResultBox>
     );
   }
