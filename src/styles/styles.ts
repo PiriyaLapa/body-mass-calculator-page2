@@ -26,7 +26,7 @@ export const StyledHeaderCard = styled.div`
     gap: 24px;
     :nth-child(1) {
       margin: 0 auto;
-      margin-top:30px;
+      margin-top: 30px;
     }
   }
 
@@ -45,8 +45,12 @@ export const StyledHeaderCard = styled.div`
   }
 `;
 export const StyledHeaderSection = styled.header`
-  background:linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%); 
-  border-radius:0 0 35px 35px;
+  background: linear-gradient(
+    290.1deg,
+    #d6e6fe 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+  border-radius: 0 0 35px 35px;
   @media screen and (max-width: 767px) {
     text-align: center;
   }
@@ -93,7 +97,7 @@ export const StyledMainSection = styled.div``;
 export const StyledScreenSizeDetect = styled.div`
   width: 90%;
   height: auto;
-  display: inline-block;
+  display: none;
   background-color: rgba(143, 227, 249, 0.2);
   padding: 2%;
   position: absolute;
@@ -114,6 +118,11 @@ export const StyledScreenSizeDetect = styled.div`
 export const StyledBmiForm = styled.div`
   display: grid;
   grid-template-rows: auto auto auto;
+  margin: 0 auto;
+  width:349px;
+  height:649px;
+  background-color: white;
+  border-radius: 16px;
 `;
 export const RadioBox = styled.div`
   display: flex;
@@ -144,7 +153,6 @@ export const RadioBox = styled.div`
 
 export const StyledMetricForm = styled.form`
   display: block;
-  
 `;
 export const StyledImprerialForm = styled.div`
   display: block;
@@ -154,8 +162,15 @@ export const ContainerRadio = styled.div`
   display: block;
 `;
 export const StyledResultBox = styled.div`
-  background-color:#ffff;
-  color:#5E6E85;
+  background: linear-gradient(90deg, #345ff7 0%, #587dff 100%);
+  border-radius: 16px;
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 257px;
+  justify-content: center;
+  margin: 0 auto;
 `;
 export const StyledIconCard = styled.div``;
 export const StyledMainCard = styled.div``;

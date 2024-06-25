@@ -19,10 +19,9 @@ export default class ResultBox extends Component<resultProps> {
     return (
       <StyledResultBox>
         <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse corporis
-          ea cupiditate reiciendis sunt quae neque quidem eos ipsum cumque
-          nesciunt libero impedit repudiandae provident, doloribus fuga commodi
-          autem eum!
+          <h3>Your BMI</h3>
+          <h1>{bmiResult}</h1>
+          <p>Your BMI suggests you’re a healthy weight. Your ideal weight is between 9st 6lbs - 12st 10lbs.</p>
         </span>
         <p>height : {height}</p>
         <p>weight: {weight}</p>
