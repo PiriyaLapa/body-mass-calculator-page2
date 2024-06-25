@@ -15,7 +15,6 @@ export default class ResultBox extends Component<resultProps> {
   render(): ReactNode {
     const { height, weight } = this.props.state;
     const bmiResult = this.CalBmi(parseInt(weight), parseInt(height));
-    // height , weight define to cm
 
     return (
       <StyledResultBox>
@@ -32,27 +31,3 @@ export default class ResultBox extends Component<resultProps> {
     );
   }
 }
-
-/** Name function resule function and multiple time */
-// function add(x: number, y: number): number {
-//   return x + y;
-// }
-
-/** anonymouse function use with ontime, callback function */
-
-// const addi = function (x: number, y: number): number {
-//   return x + y;
-// };
-
-/** Arrow function use only one time such as fillter, map, reduce */
-
-// const number = (x:number, y:number):number => x +y ;
-
-/**option parameter */
-
-// function optionPara(x:number,y?:number):number{
-//   return y?x+y:
-// }
-
-
-
