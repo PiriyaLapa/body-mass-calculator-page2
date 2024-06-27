@@ -1,5 +1,5 @@
 import { Component, ReactNode, createRef } from "react";
-import { RadioBox, StyledBmiForm } from "../../styles/styles";
+import { RadioBox, StyledBmiForm, StyledInputTest } from "../../styles/styles";
 import MetricForm from "./MetricForm";
 import ImprerialForm from "./ImprerialForm";
 
@@ -62,6 +62,7 @@ export default class BmiForm extends Component<BmiFormProps, RadioOptionState> {
               ref={this.defaultOptionRef}
             />
             <label htmlFor={optionA}>{optionA}</label>
+            <StyledInputTest />
           </div>
           <div>
             <input

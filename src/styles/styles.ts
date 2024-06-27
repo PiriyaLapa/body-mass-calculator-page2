@@ -116,16 +116,20 @@ export const StyledScreenSizeDetect = styled.div`
   }
 `;
 export const StyledBmiForm = styled.div`
-  display: grid;
-  grid-template-rows: auto auto auto;
-  margin: 10px auto;
-  border-radius: 16px;
   @media screen and (max-width: 767px) {
-    width:328px;
-    background-color:#ffff;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    margin: 10px auto;
+    border-radius: 16px;
+    width: 328px;
+    height: 649px;
+    background-color: #ffff;
+    * {
+    }
   }
 
   // Tablet
+
   @media screen and (min-width: 768px) and (max-width: 1023px) {
   }
 
@@ -138,7 +142,6 @@ export const StyledBmiForm = styled.div`
   }
   @media screen and (min-width: 1920px) {
   }
-
 `;
 export const RadioBox = styled.div`
   display: flex;
@@ -196,3 +199,8 @@ export const StyledImg = styled.img`
 
 export const StyledFooterSection = styled.div``;
 export const StyledFooterIconCard = styled.div``;
+
+export const StyledInputTest =  styled.input`
+  background-color:red;
+  border-color:yellow;
+`;

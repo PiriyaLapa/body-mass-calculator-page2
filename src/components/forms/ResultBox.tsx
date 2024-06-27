@@ -24,9 +24,6 @@ export default class ResultBox extends Component<resultProps> {
           <p>{bmiStatus}</p>
           <p>Your BMI suggests you’re a healthy weight. Your ideal weight is between 9st 6lbs - 12st 10lbs.</p>
         </span>
-        {/* <p>height : {height}</p> <p>weight: {weight}</p>
-        <h2>{bmiResult}</h2>
-        <h2>{bmiStatus}</h2> */}
       </StyledResultBox>
     );
   }
