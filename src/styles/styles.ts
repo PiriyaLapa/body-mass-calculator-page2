@@ -202,5 +202,7 @@ export const StyledFooterIconCard = styled.div``;
 
 export const StyledInputTest =  styled.input`
   background-color:red;
-  border-color:yellow;
+  border-color:green;
+  height:30px;
+  border-radius:25px;
 `;
