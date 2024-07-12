@@ -5,7 +5,7 @@ import {
   KeyboardEvent,
   ReactNode,
 } from "react";
-import { StyledMetricForm } from "../../styles/styles";
+import { StyledInputMetrix, StyledMetricForm } from "../../styles/styles";
 import ResultBox from "./ResultBox"; // Uncomment this if you need ResultBox
 import { BmiFormProps } from "./BmiForm";
 
@@ -51,20 +51,19 @@ export default class MetricForm extends Component<
     console.log("Height:", this.state.height);
     console.log("Weight:", this.state.weight);
   };
-  
-  convertToNumber =(value:string): number | null => {
-    const number =parseInt(value);
-    return isNaN(number) ? null: number;
-  }
 
+  convertToNumber = (value: string): number | null => {
+    const number = parseInt(value);
+    return isNaN(number) ? null : number;
+  };
 
   render(): ReactNode {
     const { height, weight } = this.state;
     return (
       <StyledMetricForm onSubmit={this.handleSubmit}>
-        <h2>Metric Form</h2>
+        {/* <h2>Metric Form</h2> */}
         <label htmlFor="height">Height</label>
-        <input
+        <StyledInputMetrix 
           type="text"
           name="height"
           id="height"
@@ -73,7 +72,7 @@ export default class MetricForm extends Component<
           onKeyDown={this.handleKeyPress}
         />
         <label htmlFor="weight">Weight</label>
-        <input
+        <StyledInputMetrix 
           type="text"
           name="weight"
           id="weight"

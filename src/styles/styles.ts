@@ -172,8 +172,11 @@ export const RadioBox = styled.div`
 
 export const StyledMetricForm = styled.form`
   display: block;
-
-  
+  label {
+    float:left;
+    padding-left: 28px;
+    margin: 10px 0;
+  }
 `;
 export const StyledImprerialForm = styled.div`
   display: block;
@@ -202,9 +205,17 @@ export const StyledImg = styled.img`
 export const StyledFooterSection = styled.div``;
 export const StyledFooterIconCard = styled.div``;
 
-export const StyledInputTest =  styled.input`
-  background-color:red;
-  border-color:green;
-  height:30px;
-  border-radius:25px;
+export const StyledInputTest = styled.input`
+  background-color: red;
+  border-color: green;
+  height: 30px;
+  border-radius: 25px;
+`;
+
+export const StyledInputMetrix = styled.input`
+  border-radius: 12px;
+  padding: 20px 24px;
+  border: 1px solid #D8E2E7; 
+  width: 280px;
+  height:60px;
 `;
