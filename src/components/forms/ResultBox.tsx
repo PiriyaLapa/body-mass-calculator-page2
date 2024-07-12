@@ -1,5 +1,5 @@
 import { Component, ReactNode } from "react";
-import { StyledResultBox } from "../../styles/styles";
+import { StyledResultMetrixBox } from "../../styles/styles";
 import BmiCal from "../../helpers/BmiCal";
 
 interface resultProps {
@@ -17,14 +17,14 @@ export default class ResultBox extends Component<resultProps> {
     const bmiStatus= bmiCal.GetHealthStatus(bmiResult);
     
     return (
-      <StyledResultBox>
+      <StyledResultMetrixBox>
         <span>
           <h3>Your BMI</h3>
           <h1>{bmiResult}</h1>
           <p>{bmiStatus}</p>
           <p>Your BMI suggests you’re a healthy weight. Your ideal weight is between 9st 6lbs - 12st 10lbs.</p>
         </span>
-      </StyledResultBox>
+      </StyledResultMetrixBox>
     );
   }
 }

@@ -176,6 +176,9 @@ export const StyledMetricForm = styled.form`
     float:left;
     padding-left: 28px;
     margin: 10px 0;
+    font-style:normal;
+    font-size:14px;
+    color:#5E6E85;
   }
 `;
 export const StyledImprerialForm = styled.div`
@@ -188,13 +191,25 @@ export const ContainerRadio = styled.div`
 export const StyledResultBox = styled.div`
   background: linear-gradient(90deg, #345ff7 0%, #587dff 100%);
   border-radius: 16px;
-  color: #ffff;
+  color:#ffff;
   display: flex;
   flex-direction: column;
   width: 260px;
   height: 257px;
   justify-content: center;
-  margin: 0 auto;
+  margin: 25px auto;
+`;
+
+export const StyledResultMetrixBox = styled.div`
+  background: linear-gradient(90deg, #345ff7 0%, #587dff 100%);
+  border-radius: 16px;
+  color:#ffff;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 257px;
+  justify-content: center;
+  margin: 25px auto;
 `;
 export const StyledIconCard = styled.div``;
 export const StyledMainCard = styled.div``;
@@ -219,3 +234,7 @@ export const StyledInputMetrix = styled.input`
   width: 280px;
   height:60px;
 `;
+
+export const rightAlignedInput = {
+  textAlign: "right" as "right", // TypeScript needs the type assertion here
+};
